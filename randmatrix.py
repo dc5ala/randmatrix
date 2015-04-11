@@ -20,24 +20,24 @@ size = int(sys.argv[1])
 lower_bound = -100
 upper_bound = 100
 
-sys.stdout.write('# Number of rows\n')
-sys.stdout.write(str(size) + '\n')
-sys.stdout.write('# Number of columns\n')
-sys.stdout.write(str(size) + '\n')
+sys.stdout.write("# Number of rows\n")
+sys.stdout.write(str(size) + "\n")
+sys.stdout.write("# Number of columns\n")
+sys.stdout.write(str(size) + "\n")
 
-sys.stdout.write('# matrix\n')
+sys.stdout.write("# matrix\n")
 for row in range(0, size):
     for col in range(0, size):
-        number = randint(-10, 10)
+        number = randint(lower_bound, upper_bound)
         if (col > 0):
-            sys.stdout.write(', ')
+            sys.stdout.write(", ")
         sys.stdout.write(str(number))
-    sys.stdout.write('\n')
+    sys.stdout.write("\n")
 
 
-sys.stdout.write('# solution vector\n')
+sys.stdout.write("# solution vector\n")
 for row in range(0, size):
-    number = randint(-10, 10)
+    number = randint(lower_bound, upper_bound)
     sys.stdout.write(str(number))
-    sys.stdout.write('\n')
+    sys.stdout.write("\n")
 
