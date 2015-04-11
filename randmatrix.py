@@ -14,11 +14,13 @@ if (len(sys.argv) < 2):
     sys.stdout.write("For example " + sys.argv[0] + " 8 will create a 8x8 matrix\n")
     sys.exit()
     
-# square matrix
+# for square matrix the number of rows and columns
 size = int(sys.argv[1])
 # range for random numbers
 lower_bound = -100
 upper_bound = 100
+# values in the matrix are separated by this
+separator = ", "
 
 sys.stdout.write("# Number of rows\n")
 sys.stdout.write(str(size) + "\n")
@@ -30,7 +32,7 @@ for row in range(0, size):
     for col in range(0, size):
         number = randint(lower_bound, upper_bound)
         if (col > 0):
-            sys.stdout.write(", ")
+            sys.stdout.write(separator)
         sys.stdout.write(str(number))
     sys.stdout.write("\n")
 
